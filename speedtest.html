@@ -1,7 +1,7 @@
 <script type="text/javascript">
 RED.nodes.registerType('speedtest-with-progress', {
     category: 'input',
-    color: '#28AFB0',
+    color: '#28AFF6',
     defaults: {
         name: {
             value: ''
@@ -14,12 +14,12 @@ RED.nodes.registerType('speedtest-with-progress', {
     outputs: 1,
     icon: 'white-globe.png',
     label: function() {
-        return this.name || 'speedtest';
+        return this.name || 'speedtest-with-progress';
     }
 });
 </script>
 
-<script type="text/x-red" data-template-name="speedtest">
+<script type="text/x-red" data-template-name="speedtest-with-progress">
     <div class="form-row">
         <label for="node-input-maxTime"><i class="fa fa-hourglass-end"></i> MaxTime (ms)</label>
         <input type="text" id="node-input-maxTime" placeholder="50000">
@@ -31,7 +31,7 @@ RED.nodes.registerType('speedtest-with-progress', {
     </div>
 </script>
 
-<script type="text/x-red" data-help-name="speedtest">
+<script type="text/x-red" data-help-name="speedtest-with-progress">
     <p>
         A <a href="https://github.com/ddsol/speedtest.net">speedtest.net</a> node.
     </p>
