@@ -21,6 +21,14 @@ module.exports = exports = function(RED) {
                 this.status({ fill: 'red', shape: 'dot', text: err.message });
                 this.error(err, msg);
             });
+
+            test.on('downloadspeedprogress', speed => {
+                this.send({ topic: 'downloadprogress', payload: speed });
+            });
+
+            test.on('uploadspeedprogress', speed => {
+                this.send({ topic: 'uploadprogress', payload: speed });
+            });
         });
     }
 
