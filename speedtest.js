@@ -32,5 +32,5 @@ module.exports = exports = function(RED) {
         });
     }
 
-    RED.nodes.registerType('speedtest', SpeedTest);
+    RED.nodes.registerType('speedtest-with-progress', SpeedTest);
 };
