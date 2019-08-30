@@ -12,6 +12,7 @@ module.exports = exports = function(RED) {
                 return;
             }
             this.status({ fill: 'yellow', shape: 'dot', text: 'Requesting' });
+            console.log('S', SpeedTest, SpeedTest.UNITS);
             var test = new SpeedTest({ token: config.token, unit: SpeedTest.UNITS.Mbps });
             
             test.getSpeed().then(s => {
