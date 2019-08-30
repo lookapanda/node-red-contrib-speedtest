@@ -1,36 +1,28 @@
 <script type="text/javascript">
-RED.nodes.registerType('speedtest-with-progress', {
+RED.nodes.registerType('fast-speedtest', {
     category: 'input',
     color: '#28AFF6',
     defaults: {
         name: {
             value: ''
         },
-        maxTime: {
-            value: 5 * 1000
-        },
-        serverId: {
-            value: null,
+        token: {
+            value: ''
         }
     },
     inputs: 1,
     outputs: 1,
     icon: 'white-globe.png',
     label: function() {
-        return this.name || 'speedtest-with-progress';
+        return this.name || 'fast-speedtest';
     }
 });
 </script>
 
-<script type="text/x-red" data-template-name="speedtest-with-progress">
+<script type="text/x-red" data-template-name="fast-speedtest">
     <div class="form-row">
-        <label for="node-input-maxTime"><i class="fa fa-hourglass-end"></i> MaxTime (ms)</label>
-        <input type="text" id="node-input-maxTime" placeholder="50000">
-    </div>
-    
-    <div class="form-row">
-        <label for="node-input-serverId"><i class="fa fa-fingerprint"></i> Server ID</label>
-        <input type="text" id="node-input-serverId" placeholder="">
+        <label for="node-input-token"><i class="fa fa-key"></i> Token</label>
+        <input type="text" id="node-input-token" placeholder="">
     </div>
 
     <div class="form-row">
@@ -39,8 +31,8 @@ RED.nodes.registerType('speedtest-with-progress', {
     </div>
 </script>
 
-<script type="text/x-red" data-help-name="speedtest-with-progress">
+<script type="text/x-red" data-help-name="fast-speedtest">
     <p>
-        A <a href="https://github.com/ddsol/speedtest.net">speedtest.net</a> node.
+        A <a href="https://github.com/branchard/fast-speedtest-api">fast.com</a> node.
     </p>
 </script>
