@@ -1,6 +1,6 @@
 'use strict';
 
-var SpeedTest = require('fast-speedtest-api');
+var FastSpeedTest = require('fast-speedtest-api');
 
 module.exports = exports = function(RED) {
     function SpeedTest(config) {
@@ -12,8 +12,7 @@ module.exports = exports = function(RED) {
                 return;
             }
             this.status({ fill: 'yellow', shape: 'dot', text: 'Requesting' });
-            console.log('S', SpeedTest, SpeedTest.UNITS);
-            var test = new SpeedTest({ token: config.token, unit: SpeedTest.UNITS.Mbps });
+            var test = new FastSpeedTest({ token: config.token, unit: FastSpeedTest.UNITS.Mbps });
             
             test.getSpeed().then(s => {
                 this.status({});
